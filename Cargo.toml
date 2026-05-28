@@ -12,6 +12,11 @@ description = "Index a bgzipped VCF (.csi/.tbi) — Rust port of bcftools index"
 name = "rsomics-vcf-index"
 path = "src/main.rs"
 
+
+[lib]
+name = "rsomics_vcf_index"
+path = "src/lib.rs"
+doctest = false
 [dependencies]
 rsomics-common = { version = "0.6" }
 rsomics-help = { version = "0.3" }
