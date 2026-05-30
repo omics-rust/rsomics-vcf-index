@@ -24,10 +24,10 @@ clap = { version = "4", features = ["derive"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 noodles = { version = "0.110", features = ["core", "vcf", "bgzf", "csi", "tabix"] }
-# Quadrant ② (FFI): bundled-C libdeflate via noodles-bgzf's `libdeflate` feature —
-# the inflate htslib/bcftools use. The noodles meta-crate doesn't pass the feature
-# through, so depend on noodles-bgzf directly; Cargo unifies it onto the same
-# noodles-bgzf the meta pulls in, switching every BGZF block off zlib-rs.
+# FFI: bundled-C libdeflate via noodles-bgzf's `libdeflate` feature — the inflate
+# htslib/bcftools use. The noodles meta-crate doesn't pass the feature through, so
+# depend on noodles-bgzf directly; Cargo unifies it onto the same noodles-bgzf the
+# meta pulls in, switching every BGZF block off zlib-rs.
 noodles-bgzf = { version = "0.47", features = ["libdeflate"] }
 bstr = "1"
 memchr = "2"
